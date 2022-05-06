@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ArchitectureExample</string>
+
+    <string name="fab_add_desc">Add new todo item</string>
+
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+</resources>
