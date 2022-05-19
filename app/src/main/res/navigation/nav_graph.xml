@@ -18,5 +18,10 @@
         android:id="@+id/todoEditFragment"
         android:name="de.hsfl.ap.architectureexample.view.fragments.TodoEditFragment"
         android:label="todo_edit_fragment"
-        tools:layout="@layout/todo_edit_fragment" />
+        tools:layout="@layout/todo_edit_fragment" >
+        <argument
+            android:name="edit_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
 </navigation>

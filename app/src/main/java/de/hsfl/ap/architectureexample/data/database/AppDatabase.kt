@@ -21,7 +21,7 @@ abstract class AppDatabase : RoomDatabase() {
             super.onCreate(db)
             INSTANCE?.let { database ->
                 scope.launch {
-                    var todoItemDao = database.todoItemDao()
+                    val todoItemDao = database.todoItemDao()
 
                     //todoItemDao.deleteAll()
 
