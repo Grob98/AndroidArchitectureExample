@@ -40,11 +40,19 @@ class TodoEditViewModel(private val repository: TasksRepository, editId: Int)
 
     private fun addTodoItem() {
         val title = this.title.value!!
-        val description = this.title.value!!
+        val description = this.description.value!!
 
         viewModelScope.launch {
             val todoItem = TodoItem(title, description)
             repository.addTodoItem(todoItem)
+        }
+    }
+
+    fun deleteTodoItem() {
+        if (isEditMode()) {
+            viewModelScope.launch {
+                repository.deleteTodoItem(editItem!!)
+            }
         }
     }
 

@@ -51,10 +51,17 @@ class TodoEditFragment : Fragment() {
             findNavController().popBackStack()
         }
 
+        //Delete
+        binding.bDelete.setOnClickListener {
+            viewModel.deleteTodoItem()
+            findNavController().popBackStack()
+        }
+
         //Save
         binding.bSave.setOnClickListener {
             viewModel.saveTodoItem(binding.etTitle.text.toString(),
                 binding.etDescription.text.toString())
+            findNavController().popBackStack()
         }
 
         return view

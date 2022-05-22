@@ -19,4 +19,8 @@ class TasksRepository(private val todoItemDao: TodoItemDao) {
         println("update $todoItem")
         todoItemDao.update(todoItem)
     }
+
+    suspend fun deleteTodoItem(todoItem: TodoItem) {
+        todoItemDao.delete(todoItem)
+    }
 }

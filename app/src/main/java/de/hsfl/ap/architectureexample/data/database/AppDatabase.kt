@@ -23,9 +23,8 @@ abstract class AppDatabase : RoomDatabase() {
                 scope.launch {
                     val todoItemDao = database.todoItemDao()
 
-                    //todoItemDao.deleteAll()
-
-                    todoItemDao.insertAll(TodoItem("Hallo", "Moin"))
+                    todoItemDao.insertAll(TodoItem("Aufgabe 1",
+                        "Eine neue Aufgabe erstellen"))
                 }
             }
         }

@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:labelFor="@id/etTitle"
         android:text="@string/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,17 +22,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="@+id/tvInfoTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoTitle"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/tvInfoDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:labelFor="@id/etDescription"
         android:text="@string/description"
         app:layout_constraintStart_toStartOf="@+id/etTitle"
         app:layout_constraintTop_toBottomOf="@+id/etTitle" />
@@ -41,11 +45,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="@+id/tvInfoDescription"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoDescription"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
         android:id="@+id/bCancel"
@@ -53,7 +59,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/cancel"
-        app:layout_constraintStart_toStartOf="@+id/etDescription"
+        app:layout_constraintEnd_toStartOf="@+id/bDelete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDescription" />
 
     <Button
@@ -62,6 +70,23 @@
         android:layout_height="wrap_content"
         android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="@+id/bCancel"
-        app:layout_constraintEnd_toEndOf="@+id/etDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bDelete"
+        app:layout_constraintTop_toTopOf="@+id/bCancel"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/bDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#e53935"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="@+id/bCancel"
+        app:layout_constraintEnd_toStartOf="@+id/bSave"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bCancel"
         app:layout_constraintTop_toTopOf="@+id/bCancel" />
 </androidx.constraintlayout.widget.ConstraintLayout>

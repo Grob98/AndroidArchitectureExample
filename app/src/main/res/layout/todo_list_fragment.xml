@@ -21,5 +21,6 @@
         android:clickable="true"
         android:contentDescription="@string/fab_add_desc"
         android:focusable="true"
+        android:backgroundTint="@color/teal_700"
         android:src="@drawable/add" />
 </FrameLayout>

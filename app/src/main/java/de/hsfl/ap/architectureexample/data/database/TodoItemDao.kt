@@ -22,5 +22,5 @@ interface TodoItemDao {
     suspend fun update(vararg item: TodoItem)
 
     @Delete
-    fun delete(item: TodoItem)
+    suspend fun delete(item: TodoItem)
 }
